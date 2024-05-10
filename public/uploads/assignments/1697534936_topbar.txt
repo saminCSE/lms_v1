@@ -1,0 +1,879 @@
+<header id="page-topbar md-2">
+    <div class="navbar-header">
+        <div class="d-flex">
+            <!-- LOGO -->
+            <div class="navbar-brand-box mr-2">
+                <a href="{{url('/')}}" class="logo logo-dark">
+                    <span class="logo-sm">
+                        <img src="{{ asset('assets/images/logo.png') }}" alt="" height="22">
+                    </span>
+                    <span class="logo-lg">
+                        <img src="{{ asset('assets/images/logo.png') }}" alt="" style="width: 180px; height: 50px;">
+                    </span>
+                </a>
+
+                <a href="{{url('/')}}" class="logo logo-light">
+                    <span class="logo-sm">
+                        <img class="img-responsive img-circle" src="{{ asset('assets/images/logo.png') }}" alt="" height="50">
+                    </span>
+                    <span class="logo-lg">
+                        <img src="{{ asset('assets/images/logo.png') }}" alt="" style="width: 180px; height: 50px;">
+                    </span>
+                </a>
+            </div>
+            <!-- <button type="button" class="btn btn-sm px-3 font-size-16 header-item waves-effect"
+                        id="vertical-menu-btn">
+                        <i class="fa fa-fw fa-bars"></i>
+                    </button> -->
+            <!-- App Search-->
+            <form class="app-search d-none d-lg-block">
+                <div class="position-relative">
+                    <input type="text" class="form-control" placeholder="Search..." />
+                    <span class="bx bx-search-alt"></span>
+                </div>
+            </form>
+        </div>
+        <div class="d-flex">
+            <div class="dropdown d-inline-block d-lg-none ml-2">
+                <button type="button" class="btn header-item noti-icon waves-effect" id="page-header-search-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="mdi mdi-magnify"></i>
+                </button>
+                <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right p-0" aria-labelledby="page-header-search-dropdown">
+                    <form class="p-3">
+                        <div class="form-group m-0">
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="Search ..." aria-label="Recipient's username" />
+                                <div class="input-group-append">
+                                    <button class="btn btn-primary" type="submit">
+                                        <i class="mdi mdi-magnify"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <div class="dropdown d-none d-lg-inline-block ml-1">
+                <button type="button" class="btn header-item noti-icon waves-effect" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="bx bx-customize"></i>
+                </button>
+                <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
+                    <div class="px-lg-2">
+                        <div class="row no-gutters">
+                            <div class="col">
+                                <a class="dropdown-icon-item" href="#">
+                                    <img src="assets/images/brands/github.png" alt="Github" />
+                                    <span>GitHub</span>
+                                </a>
+                            </div>
+                            <div class="col">
+                                <a class="dropdown-icon-item" href="#">
+                                    <img src="assets/images/brands/bitbucket.png" alt="bitbucket" />
+                                    <span>Bitbucket</span>
+                                </a>
+                            </div>
+                            <div class="col">
+                                <a class="dropdown-icon-item" href="#">
+                                    <img src="assets/images/brands/dribbble.png" alt="dribbble" />
+                                    <span>Dribbble</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="row no-gutters">
+                            <div class="col">
+                                <a class="dropdown-icon-item" href="#">
+                                    <img src="assets/images/brands/dropbox.png" alt="dropbox" />
+                                    <span>Dropbox</span>
+                                </a>
+                            </div>
+                            <div class="col">
+                                <a class="dropdown-icon-item" href="#">
+                                    <img src="assets/images/brands/mail_chimp.png" alt="mail_chimp" />
+                                    <span>Mail Chimp</span>
+                                </a>
+                            </div>
+                            <div class="col">
+                                <a class="dropdown-icon-item" href="#">
+                                    <img src="assets/images/brands/slack.png" alt="slack" />
+                                    <span>Slack</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="dropdown d-none d-lg-inline-block ml-1">
+                <button type="button" class="btn header-item noti-icon waves-effect" data-toggle="fullscreen">
+                    <i class="mdi mdi-fullscreen"></i>
+                </button>
+            </div>
+            <div class="dropdown d-inline-block">
+                <button type="button" class="btn header-item noti-icon waves-effect" id="page-header-notifications-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="mdi mdi-bell-outline"></i>
+                    <span class="badge badge-danger badge-pill">3</span>
+                </button>
+                <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right p-0" aria-labelledby="page-header-notifications-dropdown">
+                    <div class="p-3">
+                        <div class="row align-items-center">
+                            <div class="col">
+                                <h6 class="m-0">Notifications</h6>
+                            </div>
+                            <div class="col-auto">
+                                <a href="#!" class="small"> View All</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div data-simplebar style="max-height: 230px">
+                        <a href="#" class="text-reset notification-item">
+                            <div class="media">
+                                <div class="avatar-xs mr-3">
+                                    <span class="avatar-title bg-primary rounded-circle font-size-16">
+                                        <i class="bx bx-cart"></i>
+                                    </span>
+                                </div>
+                                <div class="media-body">
+                                    <h6 class="mt-0 mb-1">Your order is placed</h6>
+                                    <div class="font-size-12 text-muted">
+                                        <p class="mb-1">
+                                            If several languages coalesce the grammar
+                                        </p>
+                                        <p class="mb-0">
+                                            <i class="mdi mdi-clock-outline"></i> 3 min ago
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="#" class="text-reset notification-item">
+                            <div class="media">
+                                <img src="assets/images/users/avatar-3.jpg" class="mr-3 rounded-circle avatar-xs" alt="user-pic" />
+                                <div class="media-body">
+                                    <h6 class="mt-0 mb-1">James Lemire</h6>
+                                    <div class="font-size-12 text-muted">
+                                        <p class="mb-1">
+                                            It will seem like simplified English.
+                                        </p>
+                                        <p class="mb-0">
+                                            <i class="mdi mdi-clock-outline"></i> 1 hours ago
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="#" class="text-reset notification-item">
+                            <div class="media">
+                                <div class="avatar-xs mr-3">
+                                    <span class="avatar-title bg-success rounded-circle font-size-16">
+                                        <i class="bx bx-badge-check"></i>
+                                    </span>
+                                </div>
+                                <div class="media-body">
+                                    <h6 class="mt-0 mb-1">Your item is shipped</h6>
+                                    <div class="font-size-12 text-muted">
+                                        <p class="mb-1">
+                                            If several languages coalesce the grammar
+                                        </p>
+                                        <p class="mb-0">
+                                            <i class="mdi mdi-clock-outline"></i> 3 min ago
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="#" class="text-reset notification-item">
+                            <div class="media">
+                                <img src="assets/images/users/avatar-4.jpg" class="mr-3 rounded-circle avatar-xs" alt="user-pic" />
+                                <div class="media-body">
+                                    <h6 class="mt-0 mb-1">Salena Layfield</h6>
+                                    <div class="font-size-12 text-muted">
+                                        <p class="mb-1">
+                                            As a skeptical Cambridge friend of mine occidental.
+                                        </p>
+                                        <p class="mb-0">
+                                            <i class="mdi mdi-clock-outline"></i> 1 hours ago
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="p-2 border-top">
+                        <a class="btn btn-sm btn-link font-size-14 btn-block text-center" href="javascript:void(0)">
+                            <i class="mdi mdi-arrow-right-circle mr-1"></i>
+                            View More..
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="dropdown d-inline-block">
+                <button type="button" class="btn header-item waves-effect" id="page-header-user-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    @php
+                    $session_top = Session::get('LoggedUser');
+                    $photo = $session_top['photo'];
+                    @endphp
+
+                    @if($photo)
+                    <img class="rounded-circle header-profile-user" src="{{config('siteconfig.server_2_base')}}upload_file/employee_img/{{$photo}}">
+                    @else
+                    <img class="rounded-circle header-profile-user" src="{{asset('assets/images/users/default-profile.jpg')}}" alt="Header Avatar">
+                    @endif
+                    <span class="hidden-xs">{{Auth()->User()->username}}</span>
+                </button>
+                <div class="dropdown-menu dropdown-menu-right">
+                    <!-- item-->
+                    <a class="dropdown-item" href="#">
+                        <i class="bx bx-user font-size-16 align-middle mr-1"></i>
+                        Profile
+                    </a>
+                    <a class="dropdown-item" href="#">
+                        <i class="bx bx-wallet font-size-16 align-middle mr-1"></i> My
+                        Wallet
+                    </a>
+                    <a class="dropdown-item d-block" href="#">
+                        <span class="badge badge-success float-right">11</span>
+                        <i class="bx bx-wrench font-size-16 align-middle mr-1"></i>
+                        Settings
+                    </a>
+                    <a class="dropdown-item" href="#">
+                        <i class="bx bx-lock-open font-size-16 align-middle mr-1"></i>
+                        Lock screen
+                    </a>
+                    <a class="dropdown-item d-block" href="{{ route('edit_selfpasswordrecovery',['id' => auth()->user()->id]) }}">
+                        <span class="badge badge-success float-right"></span>
+                        Change Password
+                    </a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item text-danger" href="javascript:void();" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                        <i class="bx bx-power-off font-size-17 align-middle mr-1 text-danger"></i>
+                        {{ __('Logout') }}
+                    </a>
+                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                        @csrf
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- main nav bar -->
+    <nav class="navbar navbar-expand-lg main-navbar">
+        <!-- <a class="navbar-brand" href="#">Sheba Capital</a> -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav justify-content-start w-100">
+
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">
+                        <i class="bx bx-home-circle"></i>
+                        <span>Dashboard</span>
+                    </a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle has-arrow" href="#" id="company" role="button" aria-haspopup="true" aria-expanded="false">
+                        Permission
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="company">
+                        <div class="dropdown dropright">
+                            <a class="dropdown-item dropdown-toggle has-arrow-right" href="#" id="company-info" role="button" aria-haspopup="true" aria-expanded="false">
+                                Menu
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="company-info">
+                                <a class="dropdown-item" href="{{ route('menu.create') }}">Menu Add</a>
+                                <a class="dropdown-item" href="{{ route('menu.index') }}">Menu List</a>
+                                <a class="dropdown-item" href="{{ route('rolemenu.create') }}">Role Menu Add</a>
+                                <a class="dropdown-item" href="{{ route('rolemenu.index') }}">Role Menu List</a>
+                            </div>
+                        </div>
+                        <div class="dropdown dropright">
+                            <a class="dropdown-item dropdown-toggle has-arrow-right" href="#" id="company-info" role="button" aria-haspopup="true" aria-expanded="false">
+                                Admin User
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="company-info">
+                                <a class="dropdown-item" href="{{ route('admin_user.create') }}">Create User</a>
+                                <a class="dropdown-item" href="{{ route('admin_user.index') }}">User List</a>
+                            </div>
+                        </div>
+                        <div class="dropdown dropright">
+                            <a class="dropdown-item dropdown-toggle has-arrow-right" href="#" id="company-info" role="button" aria-haspopup="true" aria-expanded="false">
+                                Role
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="company-info">
+                                <a class="dropdown-item" href="{{ route('role.create') }}">Role Add</a>
+                                <a class="dropdown-item" href="{{ route('role.index') }}">Role List</a>
+                            </div>
+                        </div>
+                        <div class="dropdown dropright">
+                            <a class="dropdown-item dropdown-toggle has-arrow-right" href="#" id="company-info" role="button" aria-haspopup="true" aria-expanded="false">
+                                Permission
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="company-info">
+                                <a class="dropdown-item" href="{{ route('permissionrole.create') }}">Permission Role Add</a>
+                                <a class="dropdown-item" href="{{ route('permissionrole.index') }}">Permission Role List</a>
+                                <a class="dropdown-item" href="{{ route('permissionlabel.create') }}">Permission Role Label Add</a>
+                                <a class="dropdown-item" href="{{ route('permissionlabel.index') }}">Permission Role Label List</a>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle has-arrow" href="#" id="company" role="button" aria-haspopup="true" aria-expanded="false">
+                        Initiation Setting
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="company">
+                        <div class="dropdown dropright">
+                            <a class="dropdown-item dropdown-toggle has-arrow-right" href="#" id="company-info" role="button" aria-haspopup="true" aria-expanded="false">
+                                Manage Broker
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="company-info">
+                                <a class="dropdown-item" href="{{ route('broker.index') }}">Manage Broker</a>
+                                <a class="dropdown-item" href="{{ route('broker.create') }}">Create New Broker</a>
+                            </div>
+                        </div>
+                        <div class="dropdown dropright">
+                            <a class="dropdown-item dropdown-toggle has-arrow-right" href="#" id="company-info" role="button" aria-haspopup="true" aria-expanded="false">
+                                Manage Branche
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="company-info">
+                                <a class="dropdown-item" href="{{ route('branche.index') }}">Manage Branche</a>
+                                <a class="dropdown-item" href="{{ route('branche.create') }}">Create New Branche</a>
+                            </div>
+                        </div>
+                        <div class="dropdown dropright">
+                            <a class="dropdown-item dropdown-toggle has-arrow-right" href="#" id="company-info" role="button" aria-haspopup="true" aria-expanded="false">
+                                Manage Exchange
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="company-info">
+                                <a class="dropdown-item" href="{{ route('exchange.index') }}">Manage Exchange</a>
+                                <a class="dropdown-item" href="{{ route('exchange.create') }}">Create New Exchange</a>
+                            </div>
+                        </div>
+                        <div class="dropdown dropright">
+                            <a class="dropdown-item dropdown-toggle has-arrow-right" href="#" id="company-info" role="button" aria-haspopup="true" aria-expanded="false">
+                                Manage Charge
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="company-info">
+                                <a class="dropdown-item" href="{{ route('charge.index') }}">Manage Charge</a>
+                                <a class="dropdown-item" href="{{ route('charge.create') }}">Create New Charge</a>
+                            </div>
+                        </div>
+                        <div class="dropdown dropright">
+                            <a class="dropdown-item dropdown-toggle has-arrow-right" href="#" id="company-info" role="button" aria-haspopup="true" aria-expanded="false">
+                                Manage Occupation
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="company-info">
+                                <a class="dropdown-item" href="{{ route('occupation.index') }}">Manage Occupation</a>
+                                <a class="dropdown-item" href="{{ route('occupation.create') }}">Create New Occupation</a>
+                            </div>
+                        </div>
+                        <div class="dropdown dropright">
+                            <a class="dropdown-item dropdown-toggle has-arrow-right" href="#" id="company-info" role="button" aria-haspopup="true" aria-expanded="false">
+                                Manage Designations
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="company-info">
+                                <a class="dropdown-item" href="{{ route('designation.index') }}">Manage Designation</a>
+                                <a class="dropdown-item" href="{{ route('designation.create') }}">Add Designation</a>
+                            </div>
+                        </div>
+                        <div class="dropdown dropright">
+                            <a class="dropdown-item dropdown-toggle has-arrow-right" href="#" id="company-info" role="button" aria-haspopup="true" aria-expanded="false">
+                                Manage Degree
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="company-info">
+                                <a class="dropdown-item" href="{{ route('degree.index') }}">Manage Degree</a>
+                                <a class="dropdown-item" href="{{ route('degree.create') }}">Add Degree</a>
+                            </div>
+                        </div>
+                        <div class="dropdown dropright">
+                            <a class="dropdown-item dropdown-toggle has-arrow-right" href="#" id="company-info" role="button" aria-haspopup="true" aria-expanded="false">
+                                Bo Type
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="company-info">
+                                <a class="dropdown-item" href="{{ route('bo_type.index') }}">Manage Type</a>
+                                <a class="dropdown-item" href="{{ route('bo_type.create') }}">Add Type</a>
+                            </div>
+                        </div>
+                        <div class="dropdown dropright">
+                            <a class="dropdown-item dropdown-toggle has-arrow-right" href="#" id="company-info" role="button" aria-haspopup="true" aria-expanded="false">
+                                Bo Category
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="company-info">
+                                <a class="dropdown-item" href="{{ route('bo_category.index') }}">Manage Category</a>
+                                <a class="dropdown-item" href="{{ route('bo_category.create') }}">Add Category</a>
+                            </div>
+                        </div>
+                        <div class="dropdown dropright">
+                            <a class="dropdown-item dropdown-toggle has-arrow-right" href="#" id="company-info" role="button" aria-haspopup="true" aria-expanded="false">
+                                Bank
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="company-info">
+                                <a class="dropdown-item" href="{{ route('bank.index') }}">Manage Bank</a>
+                                <a class="dropdown-item" href="{{ route('bank.create') }}">Add Bank</a>
+                            </div>
+                        </div>
+                        <div class="dropdown dropright">
+                            <a class="dropdown-item dropdown-toggle has-arrow-right" href="#" id="company-info" role="button" aria-haspopup="true" aria-expanded="false">
+                                Relations
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="company-info">
+                                <a class="dropdown-item" href="{{ route('relations.index') }}">Manage Relation</a>
+                                <a class="dropdown-item" href="{{ route('relations.create') }}">Add Relation</a>
+                            </div>
+                        </div>
+                        <div class="dropdown dropright">
+                            <a class="dropdown-item dropdown-toggle has-arrow-right" href="#" id="company-info" role="button" aria-haspopup="true" aria-expanded="false">
+                                Product Type
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="company-info">
+                                <a class="dropdown-item" href="{{ route('product_type.index') }}">Manage Type</a>
+                                <a class="dropdown-item" href="{{ route('product_type.create') }}">Add Type</a>
+                            </div>
+                        </div>
+                        <div class="dropdown dropright">
+                            <a class="dropdown-item dropdown-toggle has-arrow-right" href="#" id="company-info" role="button" aria-haspopup="true" aria-expanded="false">
+                                Holiday Management
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="company-info">
+                                <a class="dropdown-item" href="{{ route('holiday_management.create') }}">Manage Holiday</a>
+                                <a class="dropdown-item" href="{{ route('holiday_management.index') }}">Holiday List</a>
+                            </div>
+                        </div>
+
+                        <div class="dropdown dropright">
+                            <a class="dropdown-item dropdown-toggle has-arrow-right" href="#" id="company-info" role="button" aria-haspopup="true" aria-expanded="false">
+                            Exchange Board
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="company-info">
+                                <a class="dropdown-item" href="{{ route('exchange_bord.index') }}">Manage ExchangeBord</a>
+                                <a class="dropdown-item" href="{{ route('exchange_bord.create') }}">Add ExchangeBord</a>
+                            </div>
+                        </div>
+
+                        <div class="dropdown dropright">
+                            <a class="dropdown-item dropdown-toggle has-arrow-right" href="#" id="company-info" role="button" aria-haspopup="true" aria-expanded="false">
+                                Exchange Markets
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="company-info">
+                                <a class="dropdown-item" href="{{ route('exchange_market.index') }}">Manage Exchange Markets</a>
+                                <a class="dropdown-item" href="{{ route('exchange_market.create') }}">Add Exchange Markets</a>
+                            </div>
+                        </div>
+
+                        <div class="dropdown dropright">
+                            <a class="dropdown-item dropdown-toggle has-arrow-right" href="#" id="company-info" role="button" aria-haspopup="true" aria-expanded="false">
+                                Manage Market Type
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="company-info">
+                                <a class="dropdown-item" href="{{ route('market_type.index') }}">Manage Market Type</a>
+                                <a class="dropdown-item" href="{{ route('market_type.create') }}">Add Market Type</a>
+                            </div>
+                        </div>
+                        <div class="dropdown dropright">
+                            <a class="dropdown-item dropdown-toggle has-arrow-right" href="#" id="company-info" role="button" aria-haspopup="true" aria-expanded="false">
+                            Manage Howla Type
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="company-info">
+                                <a class="dropdown-item" href="{{ route('howla_type.index') }}">Manage Howla Type</a>
+                                <a class="dropdown-item" href="{{ route('howla_type.create') }}">Add Howla Type</a>
+                            </div>
+                        </div>
+
+                        <div class="dropdown dropright">
+                            <a class="dropdown-item dropdown-toggle has-arrow-right" href="#" id="company-info" role="button" aria-haspopup="true" aria-expanded="false">
+                            Manage Category Type
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="company-info">
+                                <a class="dropdown-item" href="{{ route('category_type.index') }}">Manage Category Type</a>
+                                <a class="dropdown-item" href="{{ route('category_type.create') }}">Add Category Type</a>
+                            </div>
+                        </div>
+
+                        <div class="dropdown dropright">
+                            <a class="dropdown-item dropdown-toggle has-arrow-right" href="#" id="company-info" role="button" aria-haspopup="true" aria-expanded="false">
+                            Manage Sector Code
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="company-info">
+                                <a class="dropdown-item" href="{{ route('sector_code.index') }}">Manage Sector Code</a>
+                                <a class="dropdown-item" href="{{ route('sector_code.create') }}">Add Sector Code</a>
+                            </div>
+                        </div>
+
+                        <div class="dropdown dropright">
+                            <a class="dropdown-item dropdown-toggle has-arrow-right" href="#" id="company-info" role="button" aria-haspopup="true" aria-expanded="false">
+                            Manage Instrument Type
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="company-info">
+                                <a class="dropdown-item" href="{{ route('instrument_type.index') }}">Manage Instrument Type</a>
+                                <a class="dropdown-item" href="{{ route('instrument_type.create') }}">Add Instrument Type</a>
+                            </div>
+                        </div>
+                        <div class="dropdown dropright">
+                            <a class="dropdown-item dropdown-toggle has-arrow-right" href="#" id="company-info" role="button" aria-haspopup="true" aria-expanded="false">
+                            Manage Instrument Groups
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="company-info">
+                                <a class="dropdown-item" href="{{ route('instrument_group.index') }}">Manage Instrument Groups</a>
+                                <a class="dropdown-item" href="{{ route('instrument_group.create') }}">Add Instrument Groups</a>
+                            </div>
+                        </div>
+
+                        <div class="dropdown dropright">
+                            <a class="dropdown-item dropdown-toggle has-arrow-right" href="#" id="company-info" role="button" aria-haspopup="true" aria-expanded="false">
+                                Previous Client Setup
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="company-info">
+                                <a class="dropdown-item" href="{{ route('psetup.client') }}">Client Upload From Backoffice</a>
+                                <a class="dropdown-item" href="{{ route('psetup.clientcdbl') }}">Client Upload From CDBL</a>
+                                <a class="dropdown-item" href="{{ route('psetup.modifyclientcode') }}">Backoffice Script Code</a>
+                                <a class="dropdown-item" href="{{ route('psetup.clientShare') }}">Client Share Upload</a>
+                                <a class="dropdown-item" href="{{ route('psetup.clientLedgerUpload') }}">Client Ledger Upload</a>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle has-arrow" href="#" id="company" role="button" aria-haspopup="true" aria-expanded="false">
+                        BO Account
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="company">
+                        <div class="dropdown dropright">
+                            <a class="dropdown-item dropdown-toggle has-arrow-right" href="#" id="company-info" role="button" aria-haspopup="true" aria-expanded="false">
+                                Manage Dealership BO Operation
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="company-info">
+                                <a class="dropdown-item" href="{{ route('beneficiary_owner_dealership.index') }}">Manage BO
+                                    Dealership</a>
+                                <a class="dropdown-item" href="{{ route('beneficiary_owner_dealership.create') }}">Add BO Dealership</a>
+                            </div>
+                        </div>
+                        <div class="dropdown dropright">
+                            <a class="dropdown-item dropdown-toggle has-arrow-right" href="#" id="company-info" role="button" aria-haspopup="true" aria-expanded="false">
+                                Manage Beneficiary Owners
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="company-info">
+                                <a class="dropdown-item" href="{{ route('beneficiary_owner.index') }}">Manage Beneficiary Owners</a>
+                                <a class="dropdown-item" href="{{ route('beneficiary_owner.create') }}">Add Beneficiary Owners</a>
+                            </div>
+                        </div>
+                        <div class="dropdown dropright">
+                            <a class="dropdown-item dropdown-toggle has-arrow-right" href="#" id="company-info" role="button" aria-haspopup="true" aria-expanded="false">
+                                Bo Documents Category
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="company-info">
+                                <a class="dropdown-item" href="{{ route('bodocument_category.index') }}">Manage Category</a>
+                                <a class="dropdown-item" href="{{ route('bodocument_category.create') }}">Add Category</a>
+                            </div>
+                        </div>
+                        <div class="dropdown dropright">
+                            <a class="dropdown-item dropdown-toggle has-arrow-right" href="#" id="company-info" role="button" aria-haspopup="true" aria-expanded="false">
+                                Bo Account Documents
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="company-info">
+                                <a class="dropdown-item" href="{{ route('boaccount_document.index') }}">Manage Documents</a>
+                                <a class="dropdown-item" href="{{ route('boaccount_document.create') }}">Add Documents</a>
+                            </div>
+                        </div>
+                        <div class="dropdown dropright">
+                            <a class="dropdown-item dropdown-toggle has-arrow-right" href="#" id="company-info" role="button" aria-haspopup="true" aria-expanded="false">
+                                Voucher
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="voucher">
+                                <a class="dropdown-item" href="{{ route('voucher.index') }}">Manage Voucher</a>
+                                <a class="dropdown-item" href="{{ route('voucher.create') }}">Add Voucher</a>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle has-arrow" href="#" id="company" role="button" aria-haspopup="true" aria-expanded="false">
+                        News
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="company">
+                        <div class="dropdown dropright">
+                            <a class="dropdown-item dropdown-toggle has-arrow-right" href="#" id="company-info" role="button" aria-haspopup="true" aria-expanded="false">
+                                Announcement
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="company-info">
+                                <a class="dropdown-item" href="{{ route('announce_list') }}">Announcement List</a>
+                            </div>
+                        </div>
+
+                        <div class="dropdown dropright">
+                            <a class="dropdown-item dropdown-toggle has-arrow-right" href="#" id="company-info" role="button" aria-haspopup="true" aria-expanded="false">
+                                News
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="company-info">
+                                <a class="dropdown-item" href="{{ route('newscategory.category_create') }}">News Category</a>
+                                <a class="dropdown-item" href="{{ route('newsportal.create') }}">Create News</a>
+                                <a class="dropdown-item" href="{{ route('newsportal.index') }}">News List </a>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle has-arrow" href="#" id="company" role="button" aria-haspopup="true" aria-expanded="false">
+                        Portfolio
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="company">
+                        <div class="dropdown dropright">
+                            <a class="dropdown-item dropdown-toggle has-arrow-right" href="#" id="company-info" role="button" aria-haspopup="true" aria-expanded="false">
+                                Portfolios
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="company-info">
+                                <a class="dropdown-item" href="{{ route('portfolio.index') }}">Manage Portfolio</a>
+                            </div>
+                        </div>
+
+                        <div class="dropdown dropright">
+                            <a class="dropdown-item dropdown-toggle has-arrow-right" href="#" id="company-info" role="button" aria-haspopup="true" aria-expanded="false">
+                                Portfolio Balance
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="company-info">
+                                <a class="dropdown-item" href="{{ route('portfoliobalance.index') }}">Manage Balance</a>
+                                <a class="dropdown-item" href="{{ route('portfoliobalance.create') }}">Add Balance</a>
+                            </div>
+                        </div>
+                        <div class="dropdown dropright">
+                            <a class="dropdown-item dropdown-toggle has-arrow-right" href="#" id="company-info" role="button" aria-haspopup="true" aria-expanded="false">
+                                Portfolio Ledgers
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="company-info">
+                                <a class="dropdown-item" href="{{ route('portfolioledger.index') }}">Manage Ledgers</a>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle has-arrow" href="#" id="company" role="button" aria-haspopup="true" aria-expanded="false">
+                        Trading Services
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="company">
+                        <div class="dropdown dropright">
+                            <a class="dropdown-item dropdown-toggle has-arrow-right" href="#" id="company-info" role="button" aria-haspopup="true" aria-expanded="false">
+                                Margin
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="company-info">
+                                <a class="dropdown-item" href="{{ route('margin.index') }}">Manage Margin</a>
+                                <a class="dropdown-item" href="{{ route('margin.create') }}">Add Margin</a>
+                            </div>
+                        </div>
+                        <div class="dropdown dropright">
+                            <a class="dropdown-item dropdown-toggle has-arrow-right" href="#" id="company-info" role="button" aria-haspopup="true" aria-expanded="false">
+                                Merchant Banking Operation Type
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="company-info">
+                                <a class="dropdown-item" href="{{ route('merchant_banking_operation_type.index') }}">Manage MBOT</a>
+                                <a class="dropdown-item" href="{{ route('merchant_banking_operation_type.create') }}">Add MBOT</a>
+                            </div>
+                        </div>
+                        <div class="dropdown dropright">
+                            <a class="dropdown-item dropdown-toggle has-arrow-right" href="#" id="company-info" role="button" aria-haspopup="true" aria-expanded="false">
+                                Manage Payin PayOut
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="company-info">
+                                <a class="dropdown-item" href="{{ route('payin.store') }}">Upload Pay IN</a>
+                                <a class="dropdown-item" href="{{ route('payout.store') }}">Upload Pay Out</a>
+                            </div>
+                        </div>
+                        <div class="dropdown dropright">
+                            <a class="dropdown-item dropdown-toggle has-arrow-right" href="#" id="company-info" role="button" aria-haspopup="true" aria-expanded="false">
+                                Manage Depository Information
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="company-info">
+                                <a class="dropdown-item" href="{{ route('depository_information.index') }}">Manage Depository Information</a>
+                                <a class="dropdown-item" href="{{ route('depository_information.create') }}">Add Depository Information</a>
+                            </div>
+                        </div>
+                        <div class="dropdown dropright">
+                            <a class="dropdown-item dropdown-toggle has-arrow-right" href="#" id="company-info" role="button" aria-haspopup="true" aria-expanded="false">
+                                Manage Trader Information
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="company-info">
+                                <a class="dropdown-item" href="{{ route('trader_information.index') }}">Manage Trader Information</a>
+                                <a class="dropdown-item" href="{{ route('trader_information.create') }}">Add Trader Information</a>
+                            </div>
+                        </div>
+                        <div class="dropdown dropright">
+                            <a class="dropdown-item dropdown-toggle has-arrow-right" href="#" id="company-info" role="button" aria-haspopup="true" aria-expanded="false">
+                                Manage Fund Withdrawal Request
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="company-info">
+                                <a class="dropdown-item" href="{{ route('fund_withdrawal_request.index') }}">Manage Fund Withdrawal
+                                    Request</a>
+                                <a class="dropdown-item" href="{{ route('fund_withdrawal_request.create') }}">Add Fund Withdrawal
+                                    Request</a>
+                            </div>
+                        </div>
+                        <div class="dropdown dropright">
+                            <a class="dropdown-item dropdown-toggle has-arrow-right" href="#" id="company-info" role="button" aria-haspopup="true" aria-expanded="false">
+                                Manage Product Buy Sell
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="company-info">
+                                <a class="dropdown-item" href="{{ route('product_buy_sell.index') }}">Manage Product Buy Sell</a>
+                                <a class="dropdown-item" href="{{ route('product_buy_sell.create') }}">Add Product Buy Sell</a>
+                            </div>
+                        </div>
+
+                        <div class="dropdown dropright">
+                            <a class="dropdown-item dropdown-toggle has-arrow-right" href="#" id="company-info" role="button" aria-haspopup="true" aria-expanded="false">
+                                Manage Customer Transaction
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="company-info">
+                                <a class="dropdown-item" href="{{ route('customer_transaction.index') }}">Manage Customer
+                                    Transaction</a>
+                                <a class="dropdown-item" href="{{ route('transaction.transactionApprove') }}">Approve Manage
+                                    Transaction</a>
+                                <a class="dropdown-item" href="{{ route('transaction.transactionSearch') }}">Search Transactions</a>
+                                <a class="dropdown-item" href="{{ route('customer_transaction.create') }}">Add Customer Transaction</a>
+                            </div>
+                        </div>
+
+                        <div class="dropdown dropright">
+                            <a class="dropdown-item dropdown-toggle has-arrow-right" href="#" id="company-info" role="button" aria-haspopup="true" aria-expanded="false">
+                               Dealer Trade Report
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="company-info">
+                                <a class="dropdown-item" href="{{ route('dealer.trade_report_show') }}">Search Report </a>
+                            </div>
+                        </div>
+
+
+                        <div class="dropdown dropright">
+                            <a class="dropdown-item dropdown-toggle has-arrow-right" href="#" id="company-info" role="button" aria-haspopup="true" aria-expanded="false">
+                            Manage Netting Schedule
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="company-info">
+                                <a class="dropdown-item" href="{{ route('netting_schedule.index') }}">Manage Netting Schedule</a>
+                                <a class="dropdown-item" href="{{ route('netting_schedule.create') }}">Add Netting Schedule</a>
+                            </div>
+                        </div>
+                        <div class="dropdown dropright">
+                            <a class="dropdown-item dropdown-toggle has-arrow-right" href="#" id="company-info" role="button" aria-haspopup="true" aria-expanded="false">
+                            Manage Grouping Client Code
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="company-info">
+                                <a class="dropdown-item" href="{{ route('grouping_client_code.index') }}">Manage Grouping Client
+                                        Code</a>
+                                <a class="dropdown-item" href="{{ route('grouping_client_code.create') }}">Add Grouping Client Code</a>
+                            </div>
+                        </div>
+
+                        <div class="dropdown dropright">
+                            <a class="dropdown-item dropdown-toggle has-arrow-right" href="#" id="company-info" role="button" aria-haspopup="true" aria-expanded="false">
+                                Manage Compliance Authority
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="company-info">
+                                <a class="dropdown-item" href="{{ route('compliance_authority.index') }}">Manage Compliance
+                                        Authority</a>
+                                <a class="dropdown-item" href="{{ route('compliance_authority.create') }}">Add Compliance Authority</a>
+                            </div>
+                        </div>
+                        <div class="dropdown dropright">
+                            <a class="dropdown-item dropdown-toggle has-arrow-right" href="#" id="company-info" role="button" aria-haspopup="true" aria-expanded="false">
+                            Manage Company Information
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="company-info">
+                                <a class="dropdown-item" href="{{ route('listed_company_information.index') }}">Manage Company Information</a>
+                                <a class="dropdown-item" href="{{ route('listed_company_information.create') }}">Add Company Information</a>
+                            </div>
+                       </div>
+                    </div>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle has-arrow" href="#" id="trade-data" role="button" aria-haspopup="true" aria-expanded="false">
+                        <span>CDBL & XML</span>
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="trade-data">
+                        <a class="dropdown-item" href="{{ route('eod.show_form') }}">XML EOD Tickers</a>
+                        <a class="dropdown-item" href="{{ route('xml.tradesUpload') }}">Daily Trades EOD File </a>
+                    </div>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle has-arrow" href="#" id="trade-data" role="button" aria-haspopup="true" aria-expanded="false">
+                        <span>Report</span>
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="trade-data">
+                        <a class="dropdown-item" href="{{ route('report.investmentPortfolio') }}">Investment Portfolio</a>
+                        <a class="dropdown-item" href="{{ route('report.investmentPortfolioNav') }}">Portfolio - Nav</a>
+                        <a class="dropdown-item" href="{{ route('report.investmentPortfolioPe') }}">Portfolio - PE</a>
+                        <a class="dropdown-item" href="{{ route('report.investmentPortfolioDetails') }}">Portfolio Details</a>
+                        <a class="dropdown-item" href="{{ route('report.instrumentPortfolio') }}">Instrument Portfolio</a>
+                        <a class="dropdown-item" href="{{ route('report.shareBalance') }}">Share Balance</a>
+                        <a class="dropdown-item" href="{{ route('report.takaBalance') }}">Taka Balance</a>
+                        <a class="dropdown-item" href="{{ route('eod.show_form') }}">Share Received/Delivery </a>
+                        <a class="dropdown-item" href="{{ route('report.trading_BuySell') }}">Trading BuySell</a>
+                        <a class="dropdown-item" href="{{ route('report.buy_sale') }}">Buy and Sale</a>
+                        <a class="dropdown-item" href="{{ route('report.bonus_confirmation') }}">Bonus Confirmation</a>
+                        <a class="dropdown-item" href="{{ route('report.bonus_receive') }}">Bonus Receive</a>
+                        <a class="dropdown-item" href="{{ route('report.bo_modification') }}">Bo Modification</a>
+                        <a class="dropdown-item" href="{{ route('report.bo_closing') }}">Bo Close</a>
+                        <a class="dropdown-item" href="{{ route('report.pay_in') }}">Pay In</a>
+                        <a class="dropdown-item" href="{{ route('report.pay_inconfirm') }}">Pay In Confirm</a>
+                        <a class="dropdown-item" href="{{ route('report.transmission_confirm') }}">Transmission Confirmation</a>
+                        <a class="dropdown-item" href="{{ route('report.transmission_receive') }}">Transmission Receive</a>
+                        <a class="dropdown-item" href="{{ route('report.share_receive') }}">Share Receive</a>
+                        <a class="dropdown-item" href="{{ route('report.trading_amount_due') }}">Trading Amount Due</a>
+                        <a class="dropdown-item" href="{{ route('report.gainloss_summery') }}">Gain Loss Summery Report</a>
+                        <a class="dropdown-item" href="{{ route('report.journal_voucher') }}">Journal Voucher</a>
+                        <a class="dropdown-item" href="{{ route('report.paymentreceipt_summery') }}">Payment Receipt Summery</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle has-arrow" href="#" id="trade-data" role="button" aria-haspopup="true" aria-expanded="false">
+                        <span>Report Account</span>
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="trade-data">
+                        <a class="dropdown-item" href="{{ route('report.investmentPortfolio') }}">Chart of Account</a>
+                        <a class="dropdown-item" href="{{ route('report.investmentPortfolioNav') }}">General journal</a>
+                        <a class="dropdown-item" href="{{ route('report.investmentPortfolioPe') }}">General Ledger</a>
+                        <a class="dropdown-item" href="{{ route('report.investmentPortfolioDetails') }}">Cash Book</a>
+                        <a class="dropdown-item" href="{{ route('report.instrumentPortfolio') }}">Bank book</a>
+                        <a class="dropdown-item" href="{{ route('eod.show_form') }}">Share Balance</a>
+                        <a class="dropdown-item" href="{{ route('eod.show_form') }}">Taka Balance</a>
+                        <a class="dropdown-item" href="{{ route('eod.show_form') }}">Share Received/Delivery </a>
+                        <a class="dropdown-item" href="{{ route('eod.show_form') }}">Trading Amount</a>
+                        <a class="dropdown-item" href="{{ route('xml.tradesUpload') }}">Buy and Sale (Daily)</a>
+                        <a class="dropdown-item" href="{{ route('trad_buysell') }}">Trading Buyselldemo</a>
+
+                        
+                    </div>
+                </li>
+
+                <!-- 
+                        <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown1" role="button" aria-haspopup="true" aria-expanded="false">
+                        Services
+                      </a>
+                      <div class="dropdown-menu" aria-labelledby="navbarDropdown1">
+                        <a class="dropdown-item" href="#">Service 1</a>
+                        <a class="dropdown-item" href="#">Service 2</a>
+                        <div class="dropdown dropright">
+                          <a class="dropdown-item dropdown-toggle" href="#" id="navbarDropdown2" role="button" aria-haspopup="true" aria-expanded="false">
+                            Sub-Service
+                          </a>
+                          <div class="dropdown-menu" aria-labelledby="navbarDropdown2">
+                            <a class="dropdown-item" href="#">Sub-Service 1</a>
+                            <a class="dropdown-item" href="#">Sub-Service 2</a>
+                            <a class="dropdown-item" href="#">Sub-Service 3</a>
+                          </div>
+                        </div>
+                      </div>
+                    </li> 
+                        -->
+
+            </ul>
+            <div>
+
+            </div>
+        </div>
+    </nav>
+    <!-- main nav bar end -->
+</header>

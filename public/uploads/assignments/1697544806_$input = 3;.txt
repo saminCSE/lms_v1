@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<body>
+<?php
+$input = 3;
+$array = range(1, 10);
+
+for ($i = 0; $i < count($array); $i += $input) {
+    $slice = array_slice($array, $i, $input);
+    foreach ($slice as $value) {
+        echo $value . ' ';
+    }
+    echo "\n";
+    $i += $input;
+}
+?>
+
+</body>
+</html>
